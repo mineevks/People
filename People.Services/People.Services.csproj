@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="19.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\People.Models\People.Models.csproj" />
+    <ProjectReference Include="..\People.MSSql\People.MSSql.csproj" />
+    <ProjectReference Include="..\ValidationsHelper\ValidationsCollection.csproj" />
+  </ItemGroup>
+
+</Project>

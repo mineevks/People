@@ -1,0 +1,15 @@
+FROM git.ucs.ru:5001/whiteserver/whiteserverlinux/dotnet:5
+WORKDIR /app
+EXPOSE 80
+ 
+WORKDIR /app
+
+COPY ./Builds/CallbackSender .
+COPY ./Configuration/DockerDev/appsettings.json .
+COPY ./Configuration/DockerDev/NLog.config .
+COPY ./Configuration/Common/ws-cert.cert .
+
+
+
+
+ENTRYPOINT ["dotnet", "CallbackSender.dll"]
